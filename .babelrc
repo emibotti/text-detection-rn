@@ -1,24 +1,12 @@
 {
-  "presets": [
-    "module:metro-react-native-babel-preset"
-  ],
+  "presets": ["module:metro-react-native-babel-preset"],
   "plugins": [
     [
       "module-resolver",
       {
-        "root": [
-          "."
-        ],
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "root": ["."],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
-    ],
-    "transform-inline-environment-variables",
-    "@babel/plugin-transform-react-jsx-source",
-    "transform-html-import-require-to-string"
+    ]
   ]
 }
