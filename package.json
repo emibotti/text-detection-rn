@@ -11,6 +11,7 @@
     "@types/react-redux": "^7.0.3",
     "axios": "^0.18.0",
     "babel-plugin-module-resolver": "^3.2.0",
+    "native-base": "^2.12.1",
     "react": "16.8.3",
     "react-native": "0.59.1",
     "react-native-gesture-handler": "~1.0.14",

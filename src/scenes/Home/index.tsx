@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text, View } from 'react-native'
+import { CustomFooter } from 'src/components/CustomFooter'
 
 export class Home extends React.Component<{}> {
   public static navigationOptions = () => {
@@ -10,8 +11,9 @@ export class Home extends React.Component<{}> {
 
   public render() {
     return (
-      <View>
+      <View style={{ flex: 1 }}>
         <Text>Hey</Text>
+        <CustomFooter />
       </View>
     )
   }
