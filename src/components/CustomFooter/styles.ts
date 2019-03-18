@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     backgroundColor: '#5c6668',
     bottom: 0,
     flexDirection: 'row',
-    height: 100,
+    height: 50,
     left: 0,
     position: 'absolute',
     right: 0,

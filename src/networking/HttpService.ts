@@ -3,7 +3,7 @@ import axios from 'axios'
 
 class HttpService {
   constructor() {
-    axios.defaults.baseURL = '' // `${Config.API_HOST}`
+    axios.defaults.baseURL = 'https://text-detection-api.herokuapp.com' // `${Config.API_HOST}`
   }
 
   public get(uri: string, params?: object) {

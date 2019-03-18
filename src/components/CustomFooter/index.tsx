@@ -1,5 +1,6 @@
-import { Button, Container, Footer, FooterTab, Icon, Text } from 'native-base'
+import { Button, Footer, FooterTab, Icon, Text } from 'native-base'
 import React, { useState } from 'react'
+import { View } from 'react-native'
 import { styles } from './styles'
 
 export interface ToggleTab {
@@ -20,10 +21,10 @@ const setTabBgColor = (isActive: boolean) =>
   isActive ? styles.activeButtonBg : undefined
 
 export const CustomFooter: React.FunctionComponent<{}> = () => {
-  const [tabs, setTabs] = useState([false, false, true, false])
+  const [tabs, setTabs] = useState([false, true, false, false])
 
   return (
-    <Container>
+    <View style={{ flex: 1 }}>
       <Footer style={styles.footer}>
         <FooterTab>
           <Button
@@ -63,7 +64,7 @@ export const CustomFooter: React.FunctionComponent<{}> = () => {
               active={tabs[2]}
               name="compass"
             />
-            <Text style={setTabTextColor(tabs[2])}>Compass</Text>
+            <Text style={setTabTextColor(tabs[2])}>Album</Text>
           </Button>
           <Button
             vertical={true}
@@ -80,6 +81,6 @@ export const CustomFooter: React.FunctionComponent<{}> = () => {
           </Button>
         </FooterTab>
       </Footer>
-    </Container>
+    </View>
   )
 }
