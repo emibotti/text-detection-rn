@@ -1,12 +1,15 @@
-import { Platform } from 'react-native'
+import { TakePictureResponse } from 'react-native-camera'
 import HttpService from '../HttpService'
-import { Photo } from './types'
 
 class PhotoController {
-  public postPhoto = (photo: Photo) =>
-    HttpService.post('/api/form/', {
-      img: photo.base64,
-    })
+  public postPhoto = (photo?: TakePictureResponse) => {
+    if (photo) {
+      return HttpService.post('/api/form/', {
+        img: photo.base64,
+      })
+    }
+    throw new Error('Sorry, photo undefined')
+  }
 }
 
 export default new PhotoController()
